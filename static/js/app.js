@@ -5,8 +5,7 @@ var WEBAPP = WEBAPP || {};
 (function (window, document) {
 	WEBAPP.data = [
 		['lorem', 'ipsum'],
-		['dolor', 'sit', 'amet'],
-	];
+		['dolor', 'sit', 'amet']];
 	
 	// General application object for initialising objects
 	WEBAPP.controller = {
@@ -15,6 +14,14 @@ var WEBAPP = WEBAPP || {};
 		isIDevice : (/iphone|ipad/gi).test(navigator.appVersion),
 
 		init: function () {
+			// Capture object scope
+			// var self = this;
+
+			console.log('What is this? ', this);
+			this.controlStuff();
+			this.doNothing();
+
+
 			// Init page states			
 			WEBAPP.states.init();
 
@@ -30,7 +37,19 @@ var WEBAPP = WEBAPP || {};
 			Gator(el).on('click', function(e) {
 				// e.preventDefault() prevents default action
 			    // e.target retrieves clicked element 
+
+			    console.log('What is this here? ', this);
+			    //console.log('Clicked element:', e.target);
+
 			});
+		},
+
+		controlStuff: function () {
+			console.log('I\'m a control freak');
+		},
+
+		doNothing: function () {
+			console.log('I\'m so lazy');
 		}
 	};
 
