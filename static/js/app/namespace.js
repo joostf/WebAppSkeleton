@@ -1,0 +1,1 @@
+var WEBAPP = WEBAPP || {};

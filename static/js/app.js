@@ -15,7 +15,7 @@ var WEBAPP = WEBAPP || {};
 
 		init: function () {
 			// Capture object scope
-			// var self = this;
+			var self = this;
 
 			console.log('What is this? ', this);
 			this.controlStuff();
@@ -38,8 +38,10 @@ var WEBAPP = WEBAPP || {};
 				// e.preventDefault() prevents default action
 			    // e.target retrieves clicked element 
 
+			    self.controlStuff();
+
 			    console.log('What is this here? ', this);
-			    //console.log('Clicked element:', e.target);
+			    console.log('Clicked element:', e.target);
 
 			});
 		},
